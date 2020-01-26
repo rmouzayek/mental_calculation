@@ -1,5 +1,9 @@
+import logging 
+
 import tkinter as tk
 
+
+logger = logging.getLogger(__name__)
 
 class Chronometer(tk.Label):
     '''Class which implements a chronometer'''
@@ -27,4 +31,5 @@ class Chronometer(tk.Label):
 
     def restart(self):
         '''Restart the chronometer.'''
+        logger.info('The chrono is restarted.')
         self.time_displayed.set('0') 

@@ -36,8 +36,7 @@ class View:
         
     def collect_parameters(self):
         ''' To pick up the parameters chosen by the user on the configuration frame. '''
-        return self.config_frame.LabelledSpinb_nbr_games.get(),
-    self.config_frame.LabelledSpinb_born_sup.get(), self.config_frame.LabelledSpinb_nbr_dec.get(), self.config_frame.tablecheckb.get() 
+        return self.config_frame.LabelledSpinb_nbr_games.get(), self.config_frame.LabelledSpinb_born_sup.get(), self.config_frame.LabelledSpinb_nbr_dec.get(), self.config_frame.tablecheckb.get() 
         
     def restart(self):
         ''' Restart the game. '''

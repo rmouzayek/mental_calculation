@@ -9,7 +9,7 @@ class MainFrame(tk.Frame):
     ''' Class implementing the main frame of the application. '''
     
     def __init__(self, controller, view, root):
-        tk.Frame.__init__(self, root)
+        super(MainFrame, self).__init__(root)
         self.controller = controller
         self.view = view
         self.root = root

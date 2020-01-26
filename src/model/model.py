@@ -1,5 +1,9 @@
+import logging 
+
 from model.random_generation_utils import generate_number, generate_operation
 
+
+logger = logging.getLogger(__name__)
 
 class Model:
     '''
@@ -41,6 +45,7 @@ class Model:
             else:
                 self.success = False
         except ValueError:  # The user has entered a wrong format as answer 
+            logger.warning('The answer has a wrong format')
             self.success = False
 
         if self.score == self.limit_score:  # The game is now finished

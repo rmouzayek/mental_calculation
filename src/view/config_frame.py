@@ -8,7 +8,7 @@ class ConfigFrame(tk.Frame):
     ''' Class implementing the configuration frame. '''
     
     def __init__(self, controller, view, root):
-        super().__init__(self, root)
+        super(ConfigFrame, self).__init__(root)
         self.controller = controller
         self.view = view
         self.root = root
