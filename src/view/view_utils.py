@@ -1,5 +1,6 @@
 import tkinter as tk
 
+
 def init_root(root):
     ''' Initializes the fixed size root. '''
     root.title("Mental calculations")
@@ -61,8 +62,4 @@ class RecordScreen(tk.Label):
         
     def get(self):
         ''' To get the value of the current record. '''
-        return self.record 
-    
-    
-            
-            
+        return self.record      

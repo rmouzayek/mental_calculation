@@ -1,11 +1,14 @@
 import tkinter as tk
+
+
 from view.view_utils import TableCheckb, LabelledSpinb
+
 
 class ConfigFrame(tk.Frame):
     ''' Class implementing the configuration frame. '''
     
     def __init__(self, controller, view, root):
-        tk.Frame.__init__(self, root)
+        super().__init__(self, root)
         self.controller = controller
         self.view = view
         self.root = root
@@ -16,10 +19,10 @@ class ConfigFrame(tk.Frame):
         self.LabelledSpinb_born_sup = LabelledSpinb(self, text="Biggest number:", from_=1, to=100000, init_value=10)
         self.LabelledSpinb_nbr_dec = LabelledSpinb(self, "Number of decimals:", from_=0, to=5, init_value=0)
         self.lab_operations = tk.Label(self, text="Operations:", font=("Helvetica", 20), fg = "light blue", width=0, height=3)
-        self.tablecheckb = TableCheckb(self, {'+': 1, '-': 1, 'x': 1, '/': 0})       
-        self.operation_frame = self.tablecheckb.frame 
-        
-        # Widgets layout 
+        self.tablecheckb = TableCheckb(self, {'+': 1, '-': 1, 'x': 1, '/': 0})      
+        self.operation_frame = self.tablecheckb.frame
+
+        # Widgets layout
         self.LabelledSpinb_nbr_games.grid(row=0)
         self.LabelledSpinb_born_sup.grid(row=1)
         self.LabelledSpinb_nbr_dec.grid(row=2)
